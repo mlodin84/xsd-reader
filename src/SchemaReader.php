@@ -193,6 +193,12 @@ class SchemaReader
         if ($node->hasAttribute('use')) {
             $attribute->setUse($node->getAttribute('use'));
         }
+        if ($node->hasAttribute('default')) {
+            $attribute->setDefault($node->getAttribute('default'));
+        }
+        if ($node->hasAttribute('fixed')) {
+            $attribute->setDefault($node->getAttribute('fixed'));
+        }
 
         return $attribute;
     }
